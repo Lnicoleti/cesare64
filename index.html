@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <container id="container">
+
+        <h1>Codificador de Mensagens</h1>
+
+        <select name="base" id="baseid" onchange="showincr()">
+            <option id="base64" value="base64" >Base64</option>
+            <option id="cesar" value="cesar">Cifra de Cesar</option>
+        </select>
+        <br>
+        <div id=incrbox>
+            Digite o Incremento:
+        <input id="incremento" placeholder="incremento"></input>
+        </div>
+        <br>
+        <form id=formradio>
+            <input type="radio" id="codificar" name="codificar" value="codificar">
+            <label for="codificar">Codificar</label>
+            <input type="radio" id="decodificar" name="codificar" value="decodificar">
+            <label for="decodificar">Decodificar</label>
+        </form>
+
+        <input type="text" required="required" onkeyup="enviar()" id="textconvert" placeholder="Texto a ser interpretado">
+        <br>
+        <div id="retorno">Seu texto convertido virá aqui</div>
+
+    </container>
+    <script src="./index.js"></script>
+</body>
+
+</html>
